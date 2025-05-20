@@ -29,4 +29,15 @@ public class Stores extends BaseEntity {
 
     @Column(nullable = false, precision = 3, scale = 2)  // 0.00 ~ 5.00 범위
     private BigDecimal score;
+
+    @Override
+    public String toString() {
+        return "Store{" +
+                "storeId=" + storeId +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", score=" + score +
+                ", regions=" + (regions != null ? regions.getName() : "N/A") + // regions의 이름 출력
+                '}';
+    }
 }

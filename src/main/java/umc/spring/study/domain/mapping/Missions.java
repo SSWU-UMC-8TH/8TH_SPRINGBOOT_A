@@ -32,4 +32,8 @@ public class Missions extends BaseEntity {
 
     @Column(nullable = false, length = 1024)
     private String content;
+
+//    public String getContent() {
+//        return content;
+//    }
 }

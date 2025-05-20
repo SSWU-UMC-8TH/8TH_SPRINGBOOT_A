@@ -32,4 +32,17 @@ public class Reviews extends BaseEntity {
 
     @Column(nullable = false, columnDefinition = "int DEFAULT 0")
     private int score;
+
+    @Override
+    public String toString() {
+        return "Reviews{" +
+                "reviewId=" + reviewId +
+                ", users=" + (users != null ? users.getName() : "N/A") +
+                ", stores=" + (stores != null ? stores.getName() : "N/A") +
+                ", reviewImg=" + (reviewImg != null ? reviewImg.getReviewImgUrl() : "N/A") +
+                ", content='" + content + '\'' +
+                ", score=" + score +
+                '}';
+    }
+
 }

@@ -35,4 +35,17 @@ public class UserMission extends BaseEntity {
     @Enumerated(EnumType.STRING)
     @Column(columnDefinition = "VARCHAR(10)")
     private MissionStatus missionStatus;
+
+    @Override
+    public String toString() {
+        return "UserMission{" +
+                "userMissionId=" + userMissionId +
+                ", users=" + (users != null ? users.getName() : "N/A") +
+                ", missions=" + (missions != null ? missions.getContent() : "N/A") +
+                ", stores=" + (stores != null ? stores.getName() : "N/A") +
+                ", missionImg=" + (missionImg != null ? missionImg.getMissionImgUrl() : "N/A") +
+                ", missionStatus=" + missionStatus +
+                '}';
+    }
+
 }
