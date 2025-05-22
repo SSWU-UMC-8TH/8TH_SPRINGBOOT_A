@@ -69,6 +69,10 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// 에러 핸들러 만들기 전 validation 관련 기능 사용을 위한 의존성 추가
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
 	implementation 'org.hibernate.orm:hibernate-core:6.0.2.Final'  // Hibernate 6.0.2 이상
 	implementation 'org.hibernate.common:hibernate-commons-annotations:6.0.1.Final'
 
@@ -142,3 +146,10 @@ configurations {
 	}
 	querydsl.extendsFrom compileClasspath
 }
+
+/*
+// 자바 컴파일 시 파라미터 이름 정보를 class 파일에 포함
+tasks.withType(JavaCompile) {
+	options.compilerArgs += "-parameters"
+}
+*/
