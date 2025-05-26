@@ -20,6 +20,7 @@ public class MemberMission extends BaseEntity {
     private Long id;
 
     @Enumerated(EnumType.STRING)
+    @Column(columnDefinition = "VARCHAR(15)")
     private MissionStatus status;
 
     // 단방향 연관 관계 매핑
